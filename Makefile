@@ -1,3 +1,5 @@
+# ensure that the command to be executed is indented by a [tab] character
+
 IMAGE_TAG=ruby-sinatra
 
 lock:
@@ -8,7 +10,7 @@ lock:
 install:
 
     # bind mount local directory to container, set it as the working directory, then run `bundle install` to create the Gemfile.lock
-	docker run --rm --volume "$(PWD)":/usr/src/app --workdir /usr/src/app --env BUNDLE_APP_CONFIG="$(PWD)"/.bundler ruby:3.0 bundle install
+# 	docker run --rm --volume "$(PWD)":/usr/src/app --workdir /usr/src/app --env BUNDLE_APP_CONFIG="$(PWD)"/.bundler ruby:3.0 bundle install
 
 build:
 
